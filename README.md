@@ -15,6 +15,7 @@ rust-basics course of rust.os2edu.cn
 
 ## 参考书
 - [Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)
+- [Rust语言圣经(Rust教程 Rust Course)](https://course.rs/)
  
 ## 相关学习资源
 - [用RUST进行系统编程的自学资源](https://github.com/rcore-os/rCore/wiki/study-resource-of-system-programming-in-RUST)
