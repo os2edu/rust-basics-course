@@ -4,7 +4,7 @@ rust-basics course of rust.os2edu.cn
 ## 教材
 
 - [Programming Rust v2, 简称PR](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/)
-- [Command Line Rust, 简称CLR](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/)
+- [Command Line Rust, 简称CLR](https://www.oreilly.com/library/view/command-line-rust/9781098109424/)
 
 ## 练习
 - [通过例子学 Rust](https://rust-by-example.budshome.com/)
