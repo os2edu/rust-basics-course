@@ -22,7 +22,7 @@ rust-basics course of https://rust.os2edu.cn
  
 ## 相关学习资源
 - [Rust语言学习笔记](https://skyao.io/learning-rust/docs.html)
-   - [gihub repo](https://github.com/skyao/learning-rust) 
+   - [github repo](https://github.com/skyao/learning-rust) 
 - [用RUST进行系统编程的自学资源](https://github.com/rcore-os/rCore/wiki/study-resource-of-system-programming-in-RUST)
 
 ## Rust编程学习小组（正在开放报名中）
