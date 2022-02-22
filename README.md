@@ -2,6 +2,10 @@
 rust-basics course of https://rust.os2edu.cn
 
 ## 教材
+### 中文
+- [Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)
+
+### 英文
 - [Programming Rust v2, 简称PR](https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/)
 - [Command Line Rust, 简称CLR](https://gitee.com/chyyuu/command-line-rust)
 
