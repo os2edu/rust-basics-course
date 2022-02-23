@@ -1,11 +1,11 @@
-const NUM: usize = 100;
+const NUM: usize = 41;
 const COUNT: usize = 3;
     
 fn main() {
     let mut ring = [0; NUM];
     for index in 0..NUM {
         ring[index] = index + 1;
-        println!("ring[{}], {}", index, ring[index])
+        // println!("ring[{}], {}", index, ring[index])
     }
     // return ();
     let mut i = 0;
