@@ -204,3 +204,43 @@ unknown command: add
 result is -1
 iMac:rust-basics-course liming$ 
 ```
+
+## 表达式求值问题
+计算表达式 1-2+3*4-5= 的值，需要考虑乘除法的优先级结合比加减法高。
+```
+iMac:projects liming$ ./calc 1-2+3*4-5=
+["./calc", "1-2+3*4-5="]
+buf is 1-2+3*4-5=
+get a operand 1, push to operand_stack
+get a operator -
+top operator is None, push - to operator_stack
+get a operand 2, push to operand_stack
+get a operator +
+top operator is Not None, compare prio of - vs +
+- >= +, pop and pop and calc, then push
+pop and pop => 1 and 2
+calc result = -1, push it to operand_stack
+push + to operator_stack
+get a operand 3, push to operand_stack
+get a operator *
+top operator is Not None, compare prio of + vs *
++ < *, push + back and push * and wait for next operand 
+get a operand 4, push to operand_stack
+get a operator -
+top operator is Not None, compare prio of * vs -
+* >= -, pop and pop and calc, then push
+pop and pop => 3 and 4
+calc result = 12, push it to operand_stack
+push - to operator_stack
+get a operand 5, push to operand_stack
+get a operator =
+top operator is Not None, compare prio of - vs =
+- >= =, pop and pop and calc, then push
+pop and pop => 12 and 5
+calc result = 7, push it to operand_stack
+Last Step: 
+pop and pop => -1 and 7
+t = +
+calc result = 6, push it to operand_stack
+num: 6
+```
