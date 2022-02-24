@@ -23,8 +23,9 @@ impl Api {
 }
 
 pub mod apic {
-    pub use super::*;
-    pub use super::user::{user_controller::UserApi};
+    // 将父模块的信息引入本模块
+    use super::*;
+    use user::{user_controller::UserApi};
     pub fn init() -> (Api, UserApi) {
         (Api, UserApi)
     }

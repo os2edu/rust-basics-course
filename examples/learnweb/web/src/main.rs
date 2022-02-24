@@ -1,13 +1,20 @@
 use std::env;
 use dotenv::dotenv;
+use tracing::{info, Level};
+use tracing_subscriber::FmtSubscriber;
 mod api;
 mod app;
 mod sys;
+
 fn main() -> Result<(), std::io::Error> {
+    // 使用dotenv可以读取 .env设置的环境变量
     dotenv().ok();
-    if env::var_os("RUST_LOG").is_none() {
-        env::set_var("RUST_LOG", "poem=debug");
-    }
-    tracing_subscriber::fmt::init();
+    let subscriber = FmtSubscriber::builder()
+    .with_max_level(Level::INFO)
+    .finish();
+
+    tracing::subscriber::set_global_default(subscriber)
+        .expect("setting default subscriber failed");
+
     app::start()
 }

@@ -2009,6 +2009,7 @@ dependencies = [
  "poem-openapi",
  "sqlx",
  "tokio",
+ "tracing",
  "tracing-subscriber",
 ]
 

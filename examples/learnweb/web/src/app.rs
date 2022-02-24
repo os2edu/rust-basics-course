@@ -8,8 +8,23 @@ use crate::api::{apic::{init}};
 #[tokio::main]
 pub async fn start() -> Result<(), Error> {
 
-    // 初始化数据库
+    // TODO 初始化数据库 不使用时可以去掉
     if let Ok(_pool) = db::init_db_pool().await {
+        if let Some (pool) = _pool {
+            // 初始化数据库
+            let create_result = sqlx::query(r#"
+                CREATE TABLE IF NOT EXISTS public."user" (
+                    usercode varchar NULL,
+                    username varchar NULL,
+                    useremail varchar NULL
+                )
+            "#).execute(pool).await;
+            if let Ok(_res) = create_result {
+                let _insert_res = sqlx::query(r#"
+                INSERT INTO public."user" (usercode, username, useremail) VALUES('12345', '姜坤', 'jiangkun@livstyle.cn')
+                "#).execute(pool).await;
+            }
+        }
         println!("数据库启动成功!!!");
     }    
   
@@ -18,7 +33,7 @@ pub async fn start() -> Result<(), Error> {
         .server("http://localhost:9000/api");
   
     // Enable the Swagger UI
-    let ui = api_service.swagger_ui(); // "http://localhost:9000"
+    let ui = api_service.swagger_ui();
 
     // Create a TCP listener
     let listener = TcpListener::bind("127.0.0.1:9000");
