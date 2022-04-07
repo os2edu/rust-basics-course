@@ -1,6 +1,6 @@
 const NUM: usize = 41;
 const COUNT: usize = 3;
-    
+
 fn main() {
     let mut ring = [0; NUM];
     for index in 0..NUM {
@@ -19,12 +19,14 @@ fn main() {
             println!("当前位置 {}, 报数 j = {}", i + 1, j);
 
             if j == COUNT {
-                println!("{} --> out", i+1);
+                println!("{} --> out", i + 1);
                 out = out + 1;
                 ring[i] = 0;
                 j = 0;
+                if NUM - out < COUNT {
+                    break;
+                }
             }
-      
         }
 
         i = (i + 1) % NUM;
@@ -33,6 +35,6 @@ fn main() {
         //   i = 0;
         // }
     }
-      
+
     println!("Josephus ring game is over!");
 }
