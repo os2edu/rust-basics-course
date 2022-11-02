@@ -1,5 +1,5 @@
 # rust-basics-course
-rust-basics course of https://rust.os2edu.cn
+rust-basics course of <https://os2edu.cn/course>
 
 [陈渝老师推荐的Rust学习进度安排](https://github.com/os2edu/rust-basics-course/blob/main/schedule.md)
 
@@ -50,7 +50,7 @@ rust-basics course of https://rust.os2edu.cn
 [小组公约最新版本](https://github.com/os2edu/rust-basics-course/wiki/Rust%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%84%E5%85%AC%E7%BA%A6)
 
 ### 学习小组报名链接
-https://rust.os2edu.cn/pages/course?id=101
+https://os2edu.cn/course/101
 
 ### 小组协作课程教材链接
 http://docs.os2edu.cn/
